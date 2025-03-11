@@ -65,7 +65,7 @@ public class PrestamoService {
 
     // 🔹 Llamada a colecciones-service para reducir stock con autenticación
     private void reducirStock(Long coleccionId, String token) {
-        String url = "http://localhost:9092/colecciones/admin/reducir-stock/" + coleccionId;
+        String url = "http://172.191.132.105:9092/colecciones/admin/reducir-stock/" + coleccionId;
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", token); // ✅ Agregar token en la cabecera
@@ -145,7 +145,7 @@ public class PrestamoService {
 
     private String obtenerTituloColeccion(Long coleccionId, String token) {
         try {
-            String url = "http://localhost:9092/colecciones/user/" + coleccionId;
+            String url = "http://172.191.132.105:9092/colecciones/user/" + coleccionId;
 
             HttpHeaders headers = new HttpHeaders();
             headers.set("Authorization", token); // ✅ Agregar token en la cabecera

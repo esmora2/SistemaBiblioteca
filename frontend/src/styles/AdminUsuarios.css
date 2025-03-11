@@ -1,0 +1,74 @@
+/* Contenedor principal */
+.admin-users__container {
+  padding: 40px 30px;
+  min-height: 80vh;
+  background-color: #f8f9fa;
+}
+
+/* Botón "Regresar" */
+.admin-users__back-button {
+  margin-bottom: 20px;
+  width: auto;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #696969, #000000);
+  color: white !important; /* 🔹 Asegura que el texto siempre sea blanco */
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.admin-users__back-button:hover {
+  background: linear-gradient(45deg, #4f4f4f, #000000);
+  transform: scale(1.05);
+}
+
+/* Barra de búsqueda */
+.admin-users__search-bar {
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+}
+
+/* Tarjetas de usuario */
+.admin-users__user-card {
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.admin-users__user-card:hover {
+  transform: scale(1.05);
+}
+
+/* Botones dentro de las tarjetas */
+.admin-users__card-buttons button {
+  background-color: #007bff;
+  color: white !important; /* 🔹 Forzar color blanco */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.admin-users__card-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor de botones dentro de la tarjeta */
+.admin-users__card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-users__user-card {
+    margin-bottom: 20px;
+  }
+}

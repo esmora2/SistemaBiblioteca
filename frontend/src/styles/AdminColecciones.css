@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0px;
+    padding: 0;
+  }
+  
+  /* Botón "Regresar" */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #013e7e, #001e3c);
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botón "Eliminar" con color rojo */
+  button:nth-child(2) {
+    background-color: #dc3545;
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Títulos */
+  h1, h2 {
+    text-align: center;
+    color: #222;
+  }
+  
+  /* Inputs */
+input {
+    width: 50%;  /* Reduce el ancho al 50% del contenedor */
+    padding: 8px;
+    margin: 5px auto; /* Centra los inputs */
+    display: block; /* Hace que los inputs se alineen verticalmente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  
+  /* Tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background: #0c0c0c;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background: #f8f9fa;
+  }
+  
+  /* Imagen dentro de la tabla */
+  img {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para enlaces */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

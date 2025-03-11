@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/public/auth") // Ruta accesible sin autenticación
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://172.191.132.105:5173")
 public class LoginController {
 
     private final AuthService authService;

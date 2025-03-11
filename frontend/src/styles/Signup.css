@@ -1,0 +1,87 @@
+.signup-container {
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 30px;
+}
+
+/* 🔹 Caja del formulario */
+.form-box {
+  background: white;
+  padding: 50px;
+  border-radius: 100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px; /* ✅ MÁS ANCHO */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 🔹 Título */
+.form-box h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* 🔹 Campos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #545454;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Botón estilizado */
+.signup-button {
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #696969, #000000);
+  padding: 14px;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  color: white;
+}
+
+.signup-button:hover {
+  background: linear-gradient(45deg, #013e7e, #001e3c);
+  transform: scale(1.05);
+}
+
+/* 🔹 Mensajes de éxito/error */
+.alert {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* 🔹 Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

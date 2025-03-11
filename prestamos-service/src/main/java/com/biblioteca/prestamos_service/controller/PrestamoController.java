@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/prestamos")
-@CrossOrigin(origins = "http://localhost:5173") // Permitir acceso desde el frontend
+@CrossOrigin(origins = "http://172.191.132.105:5173") // Permitir acceso desde el frontend
 public class PrestamoController {
 
     private final PrestamoService prestamoService;

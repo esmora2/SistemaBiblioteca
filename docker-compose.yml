@@ -1,0 +1,94 @@
+version: '3.8'
+
+networks:
+  biblioteca-network:
+    driver: bridge
+
+services:
+  colecciones-service:
+    build:
+      context: ./colecciones-service
+    ports:
+      - "9092:9092"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/biblioteca
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+    depends_on:
+      - db
+    networks:
+      - biblioteca-network
+
+  prestamos-service:
+    build:
+      context: ./prestamos-service
+    ports:
+      - "9093:9093"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/biblioteca
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+    depends_on:
+      - db
+    networks:
+      - biblioteca-network
+
+  signup-service:
+    build:
+      context: ./signup-service
+    ports:
+      - "9090:9090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/biblioteca
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+    depends_on:
+      - db
+    networks:
+      - biblioteca-network
+
+  usuarios-service:
+    build:
+      context: ./usuarios-service
+    ports:
+      - "9091:9091"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/biblioteca
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+    depends_on:
+      - db
+    networks:
+      - biblioteca-network
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - colecciones-service
+      - prestamos-service
+      - signup-service
+      - usuarios-service
+    environment:
+      - VITE_PORT=5173
+      - HOST=0.0.0.0
+    networks:
+      - biblioteca-network
+
+  db:
+    image: postgres:13.1-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=biblioteca
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - biblioteca-network
+
+volumes:
+  db_data:

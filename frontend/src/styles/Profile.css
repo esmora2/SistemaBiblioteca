@@ -1,0 +1,116 @@
+/* 🔹 Contenedor principal */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  /* 🔹 Tarjeta de perfil */
+  .profile-card {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: white;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* 🔹 Encabezado del perfil */
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* 🔹 Ícono de usuario */
+  .profile-icon {
+    font-size: 80px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  /* 🔹 Botón de Cerrar Sesión */
+  .logout-button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    background: #dc3545;
+    border: none;
+  }
+  
+  .logout-button:hover {
+    background: #b02a37;
+  }
+  
+  /* 🔹 Botón de acciones para usuarios */
+  .action-button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(45deg, #013e7e, #001e3c);
+    border: none;
+    color: white;
+  }
+  
+  .action-button:hover {
+    background: linear-gradient(45deg, #013e7e, #001e3c);
+  }
+  
+  /* 🔹 Botones de administrador */
+  .admin-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    gap: 10px;
+    color: white;
+  }
+  
+  .admin-button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    background: linear-gradient(45deg, #013e7e, #001e3c);
+    color: white;
+  }
+  
+  .admin-button:hover {
+    opacity: 0.8;
+  }
+  
+  /* 🔹 Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 🔹 Responsive */
+  @media (max-width: 768px) {
+    .profile-card {
+      max-width: 90%;
+      padding: 20px;
+    }
+  }
+  

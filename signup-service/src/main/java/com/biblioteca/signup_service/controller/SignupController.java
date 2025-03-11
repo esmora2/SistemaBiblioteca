@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/signup")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://172.191.132.105:5173")
 public class SignupController {
 
     private final UsuarioService usuarioService;

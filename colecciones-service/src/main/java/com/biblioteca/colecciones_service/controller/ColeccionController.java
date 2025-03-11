@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/colecciones")
-@CrossOrigin(origins = "http://localhost:5173") // Permitir peticiones desde el frontend
+@CrossOrigin(origins = "http://172.191.132.105:5173") // Permitir peticiones desde el frontend
 public class ColeccionController {
 
     private final ColeccionService coleccionService;
